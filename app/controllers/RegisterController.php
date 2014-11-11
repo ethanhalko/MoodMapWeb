@@ -10,9 +10,10 @@ class RegisterController extends \BaseController {
 				'username'=>Input::get('username'),
 				'password'=>Hash::make(Input::get('password'))
 			]);
-			$uid = Session::get('uid')->uid;
-			$moods = RecordedMood::where('uid', '=', $uid)->get();
-			return View::make('partials.main', ['moods'=>$moods]);
+
+			//todo: add "now log in message"
+			return Redirect::action('LoginController@index');
+
 		}
 		else{
 			return  'Passwords do not match';

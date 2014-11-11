@@ -6,7 +6,7 @@
 	<body>
 		<div id="content" class="container-fluid">
 			<div id="wrap" class="center-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h3 class="title">Mood Map</h3>
+				<h3 class="title script"><a href="/">Mood Map</a></h3>
 				@yield('content')
 			</div>
 		</div>
