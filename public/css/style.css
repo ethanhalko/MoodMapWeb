@@ -30,9 +30,14 @@ body{
 
 }
 .text{
-	border-width: 0 0 2px 0;
+	border-width: 0 0 1px 0;
 	outline:0;
+	border-color: black;
 
+}
+#chart{
+	font-family: 'Poiret One', cursive !important;
+	text-align: center !important;
 }
 .form-panel{
 	margin-top: 30px;

@@ -2,6 +2,7 @@
 	<head>
 		<title>Mood Map</title>
 		{{HTML::style('css/style.css');}}
+		@yield('head')
 	</head>
 	<body>
 		<div id="content">
