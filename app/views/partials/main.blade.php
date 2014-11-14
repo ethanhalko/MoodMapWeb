@@ -2,7 +2,7 @@
 @section('content')
 <div class="form-panel center-block">
 	<a href="/logout">Logout</a>
-
+	<?$message?>
 	{{Form::open(['url'=>'add'])}}
 		<div id="mood">
 			Dear Mood Map, right now I am feeling <input type="text" name="mood" id="mood" value="Mood"/>

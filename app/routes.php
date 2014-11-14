@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->before('auth');
 Route::post('/add', 'HomeController@addMood');
 
 Route::get('/register', 'RegisterController@index');

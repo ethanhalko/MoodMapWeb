@@ -1,6 +1,7 @@
 @extends('default')
 @section('content')
 <div class="form-panel center-block">
+	<a href="/"><-Back</a>
 	{{Form::open(['url'=>'register'])}}
 		<div id="Username">
 			{{Form::label('username', 'Username: ' )}}
@@ -10,6 +11,7 @@
 			{{Form::label('password', 'Password: ' )}}
 			{{Form::password('password')}}
 		</div>
+
 		<div id="Username">
 			{{Form::label('confirm', 'Confirm: ' )}}
 			{{Form::password('confirm')}}
@@ -17,6 +19,9 @@
 		<div id="submit">
 			{{Form::submit('Register')}}
 		</div>
+		@if( $errors->any() )
+			<p class="error">{{$errors->first()}}</p>
+		@endif
 	{{Form::close()}}
 	</div>
 @stop

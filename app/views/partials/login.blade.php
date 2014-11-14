@@ -9,10 +9,14 @@
 		<div id = "password" >
 			{{form::password('password') }}
 		</div>
+		@if( $errors->any() )
+			<p class="error">{{$errors->first()}}</p>
+		@endif
 		<div id = "submit" >
 			{{form::submit('Login') }}
 		</div>
 		<a href="/register" class="script">Register</a>
 		{{ Form::close() }}
+
 	</div>
 @stop

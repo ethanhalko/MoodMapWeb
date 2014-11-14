@@ -57,3 +57,7 @@ a{
 #submit, #username, #password{
 	padding-top: 10px;
 }
+.error{
+	font-weight: lighter;
+	color: red;
+}

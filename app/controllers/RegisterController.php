@@ -10,13 +10,12 @@ class RegisterController extends \BaseController {
 				'username'=>Input::get('username'),
 				'password'=>Hash::make(Input::get('password'))
 			]);
-
 			//todo: add "now log in message"
 			return Redirect::action('LoginController@index');
 
 		}
 		else{
-			return  'Passwords do not match';
+			return Redirect::back()->withInput()->withErrors(['Passwords don\'t match!']);
 		}
 	}
 }
