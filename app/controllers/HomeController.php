@@ -31,4 +31,7 @@ class HomeController extends BaseController {
 		$moods = RecordedMood::where('uid', '=', $uid)->get();
 		return View::make('partials.main', ['moods'=>$moods]);
 	}
+	public function about(){
+		return View::make('partials.about');
+	}
 }
